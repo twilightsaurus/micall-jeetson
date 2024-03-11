@@ -2,29 +2,44 @@
   text-align: center;
 }
 
+html {
+  
+  font-size: calc(100vw / 1920);
+}
+
 .container {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
   height: 100vh;
+  overflow-x: hidden;
   width: 100vw;
 }
 
 .x-link {
-  margin: 0 0 10vh 10vh;
+  margin: 0 0 100rem 100rem;
 }
 
 .x-icon {
-  width: 15vh;
-  height: 15vh;
+  width: 150rem;
+  height: 150rem;
 }
 
 .tg-link {
-  margin: 0 10vh 10vh 0;
+  margin: 0 100rem 100rem 0;
 }
 
 .tg-icon {
-  width: 20vh;
-  height: 20vh;
+  width: 200rem;
+  height: 200rem;
+}
+
+.curve-link {
+  margin: 0 0 100rem 0;
+}
+
+.curve-icon {
+  width: 400rem;
+  height: 200rem;
 }
