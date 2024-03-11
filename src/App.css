@@ -1,22 +1,30 @@
 #root {
-  width: 960px;
-  margin: 0 auto;
   text-align: center;
 }
 
 .container {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
+
 .x-link {
-  position: absolute;
-  bottom: 50px;
-  right: 30%;
+  margin: 0 0 10vh 10vh;
+}
+
+.x-icon {
+  width: 15vh;
+  height: 15vh;
 }
 
 .tg-link {
-  position: absolute;
-  bottom: 50px;
-  left: 15%;
+  margin: 0 10vh 10vh 0;
+}
+
+.tg-icon {
+  width: 20vh;
+  height: 20vh;
 }

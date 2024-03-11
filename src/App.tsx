@@ -6,10 +6,10 @@ function App() {
     <>
       <div className='container'>
        <a href="https://x.com/MJeetson" className="x-link">
-        <img src="/x.png" alt="MJeeston on X" />
+        <img src="/x.png" alt="MJeeston on X"  className='x-icon' />
        </a>
         <a href="https://t.me/+oa-y9n41xa9iNmRk" className="tg-link">
-        <img src="/tg.png" alt="Moonjeeters TG group." />
+        <img src="/tg.png" alt="Moonjeeters TG group." className='tg-icon' />
        </a>
       </div>
     </>
