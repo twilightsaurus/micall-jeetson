@@ -1,59 +1,46 @@
 #root {
+  position: relative;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  font-size: calc(100vh / 1080);
 }
 
 body {
   overflow: hidden;
 }
 
-html {  
-  font-size: calc(100vw / 1920);
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 25vh;
 }
 
-.wrapper {  
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.left {
-  height: 100%;
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.center {
-  position: relative;
-  flex: 1;
-  height: 100%;
-  background-image: url("/bg_small.jpg");
-  background-size: contain;
+.background {
+  background-image: url('/bg.png');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.right {
+  width: 500rem;
   height: 100%;
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  margin: 0 auto;
 }
 
-.x-link {
-  margin: 0;
+.links {
+  padding-top: 3vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .x-icon {
@@ -61,34 +48,37 @@ html {
   height: 150rem;
 }
 
-.tg-link {
-  margin: 0;
-}
-
 .tg-icon {
-  width: 200rem;
-  height: 200rem;
-}
-
-.center-link {
-  margin: 0 128rem 100rem 0;
+  width: 150rem;
+  height: 150rem;
 }
 
 .center-icon {
-  width: 400rem;
+  height: 140rem;
+  width: 500rem;
+}
+
+.animated {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
 }
 
 .baby {
-  width: 115rem;
+  width: 100rem;
   position: absolute;
-  left: 230rem;
-  top: 445rem;
-  transform: translateY(0);
+  top: 49%;
+  right: 120rem;
+  transform: translate(0);
   will-change: transform;
 }
 
 @keyframes drop {
-  to { transform: translateY(100vh); }
+  to {
+    transform: translateY(100vh);
+  }
 }
 
 .baby-hover {
@@ -96,16 +86,31 @@ html {
 }
 
 .jeeted {
-  width: 230rem;
+  width: 160rem;
   position: absolute;
-  left: 205rem;
-  top: 180rem;
+  right: 80rem;
+  top: 32%;
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
   will-change: opacity;
   transform: rotate(45deg);
 }
 
 .jeeted.visible {
   opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tg-link {
+    position: absolute;
+    left: 60rem;
+    top: 140rem;
+  }
+
+  .x-link {
+    position: absolute;
+    right: 60rem;
+    top: 140rem;
+  }
 }
