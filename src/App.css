@@ -2,23 +2,58 @@
   text-align: center;
 }
 
-html {
-  
+body {
+  overflow: hidden;
+}
+
+html {  
   font-size: calc(100vw / 1920);
 }
 
-.container {
+.wrapper {  
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
   height: 100vh;
-  overflow-x: hidden;
   width: 100vw;
+  overflow: hidden;
+}
+
+.left {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.center {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  background-image: url("/bg_small.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.right {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .x-link {
-  margin: 0 0 100rem 100rem;
+  margin: 0;
 }
 
 .x-icon {
@@ -27,7 +62,7 @@ html {
 }
 
 .tg-link {
-  margin: 0 100rem 100rem 0;
+  margin: 0;
 }
 
 .tg-icon {
@@ -35,11 +70,42 @@ html {
   height: 200rem;
 }
 
-.curve-link {
-  margin: 0 0 100rem 0;
+.center-link {
+  margin: 0 128rem 100rem 0;
 }
 
-.curve-icon {
+.center-icon {
   width: 400rem;
-  height: 200rem;
+}
+
+.baby {
+  width: 115rem;
+  position: absolute;
+  left: 230rem;
+  top: 445rem;
+  transform: translateY(0);
+  will-change: transform;
+}
+
+@keyframes drop {
+  to { transform: translateY(100vh); }
+}
+
+.baby-hover {
+  animation: drop 2s ease-in-out forwards;
+}
+
+.jeeted {
+  width: 230rem;
+  position: absolute;
+  left: 205rem;
+  top: 180rem;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  will-change: opacity;
+  transform: rotate(45deg);
+}
+
+.jeeted.visible {
+  opacity: 1;
 }
